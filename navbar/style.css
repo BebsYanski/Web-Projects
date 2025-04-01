@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.turq {
+    background: #16A085;
+}
+
+.turq:checked {
+    background: #1ABC9C;
+}
+
+.blue {
+    background: #2980B9;
+}
+
+.blue:checked {
+    background: #3498DB;
+}
+
+.yellow {
+    background: #eeca5a;
+}
+
+.yellow:checked {
+    background: #ffdc70;
+}
+
+.red {
+    background: #C0392B;
+}
+
+.red:checked {
+    background: #E74C3C;
+}
+
+.dark {
+    background: #2C3E50;
+}
+
+.dark:checked {
+    background: #34495E;
+}
+
+.sun {
+    background: #F39C12;
+}
+
+.sun:checked {
+    background: #F1C40F;
+}
+
+.container {}
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container nav ul {
+    display: flex;
+}
+
+.container nav ul li {
+    margin: 5px 15px;
+    list-style: none;
+    color: #fff;
+    /* font-weight: 600; */
+    /* display: inline-block; */
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+li>a,
+a:visited {
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+li>a:hover {
+    /* background: rgba(0, 0, 0, 0.1); */
+    text-decoration: underline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -webkit-transition: all 3s ease-in-out;
+}
+
+.search-container {
+    margin: 1em;
+    width: 23rem;
+}
+
+#search-bar {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+}
+
+#search-bar:focus {
+    background-color: white;
+}
+
+#search-bar::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+#search-bar:-moz-placeholder {
+    color: #FFF;
+}
+
+#search-bar::-moz-placeholder {
+    color: #FFF;
+}
+
+#search-bar:-ms-input-placeholder {
+    color: #FFF;
+}
