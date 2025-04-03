@@ -1,3 +1,5 @@
+/* Layout and default stylings */
+
 *,
 *::before,
 *::after {
@@ -22,6 +24,44 @@
 html {
     overflow-x: hidden;
 }
+
+body {
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--subtitle-color);
+}
+
+a:hover,
+a:focus {
+    color: var(--title-color);
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* Header section containing logo and navbar */
 
 .header {
     background: var(--bg-color);
@@ -54,10 +94,6 @@ html {
     font-size: .75rem;
 }
 
-header h1 {
-    color: var(--title-color);
-}
-
 nav {
     margin: 2em 0;
 }
@@ -86,4 +122,52 @@ nav a:focus,
 .current-page {
     border-bottom: 2px solid var(--subtitle-color);
     color: var(--subtitle-color);
+}
+
+
+/* Main page section */
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 2vw;
+    @media (min-width: 60em) {
+        flex-direction: row;
+    }
+}
+
+main {
+    flex: 70%;
+}
+
+aside {
+    flex: 30%;
+    padding: 2em 0;
+}
+
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .875rem;
+}
+
+.article-read-more {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.article-read-more:hover,
+.article-read-more:focus,
+.article-body a:hover {
+    text-decoration: underline;
+    color: var(--title-color);
+}
+
+.article-body a {
+    text-decoration: underline;
 }
