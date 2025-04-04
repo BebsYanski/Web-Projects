@@ -30,12 +30,18 @@ body {
     font-weight: 300;
 }
 
+article {
+    margin: 1em 0;
+    padding: 1em 0;
+}
+
 h1,
 h2,
 h3 {
     font-family: 'Lora', serif;
     font-weight: 400;
     color: var(--title-color);
+    margin: 0 0 1em 0;
 }
 
 h1 {
@@ -43,8 +49,9 @@ h1 {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    display: block;
 }
 
 a {
@@ -86,6 +93,10 @@ strong {
     @media (max-width: 60em) {
         flex-direction: column;
     }
+}
+
+header h1 {
+    margin: 0;
 }
 
 .subtitle {
@@ -131,20 +142,22 @@ nav a:focus,
     display: flex;
     flex-direction: column;
     gap: 2vw;
+    justify-content: space-between;
     padding: 2vw;
     @media (min-width: 60em) {
         flex-direction: row;
     }
 }
 
-main {
+
+/* main {
     flex: 70%;
 }
 
 aside {
     flex: 30%;
     padding: 2em 0;
-}
+} */
 
 .article-title {
     font-size: 1.5rem;
@@ -155,10 +168,16 @@ aside {
     font-size: .875rem;
 }
 
+.article-info {
+    margin: 1.5em 0;
+}
+
 .article-read-more {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
+    display: inline-block;
+    margin: 1em 0;
 }
 
 .article-read-more:hover,
@@ -170,4 +189,31 @@ aside {
 
 .article-body a {
     text-decoration: underline;
+}
+
+.article-featured {
+    border-bottom: 1px solid var(--link-color);
+    padding-bottom: 1em;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+@media (min-width: 60em) {
+    main {
+        width: 70%;
+    }
+    aside {
+        width: 25%;
+    }
 }
