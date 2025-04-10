@@ -199,6 +199,11 @@ aside {
 .article-recent {
     display: flex;
     flex-direction: column;
+    @media (min-width: 60em) {
+        flex-direction: row;
+        gap: 2vw;
+        justify-content: space-between;
+    }
 }
 
 .article-recent-main {
@@ -207,6 +212,12 @@ aside {
 
 .article-recent-secondary {
     order: 1;
+}
+
+.article-image {
+    width: 100%;
+    /* min-height: 250px; */
+    object-fit: cover;
 }
 
 @media (min-width: 60em) {
